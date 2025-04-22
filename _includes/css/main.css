@@ -46,7 +46,7 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 50px;
 }
 
@@ -61,6 +61,14 @@ header .intro-text .name {
     font-family: "Inter",sans-serif;
 }
 
+/* Reduce font size and align text to the left for the non-centered block */
+.non-centered {
+    font-size: 0.9em; /* Adjust font size as needed */
+    text-align: left;
+    display: block; /* Ensures proper alignment */
+    margin-top: 10px; /* Optional: Add spacing if needed */
+  }
+  
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
@@ -117,10 +125,47 @@ section#about {
 
 /* Services Section */
 
-section#services {
-    background-color: #{{ site.color.x11_gray }};
-    color: #000;
+#services .service-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #services .service-title {
+    flex: 1 0 30%; /* 30% width for the title column */
+    max-width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  #services .service-bullets {
+    flex: 1 0 70%; /* 70% width for the bullets column */
+    max-width: 70%;
+  }
+  
+  #services .service-bullets h3 {
+    font-size: 2rem;
+    margin: 5px 0;
+  }
+
+  /* Responsive Single-Column Layout for Small Screens */
+@media (max-width: 768px) {
+    #services .service-row {
+        display: block; /* Stack elements vertically */
+    }
+
+    #services .service-title {
+        max-width: 100%; /* Full width for the title */
+        margin-bottom: 10px; /* Add spacing between the title and bullets */
+        text-align: center; /* Optional: Center-align the title */
+    }
+
+    #services .service-bullets {
+        max-width: 100%; /* Full width for the bullets */
+        text-align: left; /* Align bullets to the left */
+    }
 }
+
 
 /* Contact Section */
 
@@ -284,6 +329,9 @@ footer .footer-below {
     }
     header .intro-text .name {
         font-size: 2em;
+    }
+    header .intro-text .non-centered {
+        font-size: 2rem; /* Adjust font size for non-centered text */
     }
 }
 

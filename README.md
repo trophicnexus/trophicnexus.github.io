@@ -62,6 +62,11 @@ Contains Markdown files for individual portfolio projects. Each file represents 
 - `img`: Image filename for the project thumbnail.
 - `description`: A brief description of the project.
 
+This section is not used by default. To enable it:
+- `% include` the files `projects.html` and `project-modals.html` in the `default.html` file in the `_layouts/` directory.
+- update the images in `img/projects` and modals in `_projects/`
+- update the `project-modals.html` file to include the project modals.
+
 To add a new project, create a new Markdown file in this directory using the existing files as templates.
 
 #### `css/`, `img/`, `js/`

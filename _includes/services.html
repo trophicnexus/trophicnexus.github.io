@@ -3,19 +3,23 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2>Services (UPDATE ME)</h2>
+        <h2>Services</h2>
         <hr class="short-rule">
       </div>
     </div>
     <div class="row">
       {% for service in site.services %}
-      <div class="col-md-4">
-        <h2>{{ service.title }}</h2>
-        <ul>
-          {% for bullet in service.bullets %}
-          <h3>{{ bullet }}</h3>
-          {% endfor %}
-        </ul>
+      <div class="service-row">
+        <div class="service-title">
+          <h2>{{ service.title }}</h2>
+        </div>
+        <div class="service-bullets">
+          <ul>
+            {% for bullet in service.bullets %}
+            <li><h3>{{ bullet }}</h3></li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       {% endfor %}
     </div>
