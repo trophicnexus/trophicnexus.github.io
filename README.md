@@ -5,11 +5,12 @@ URL: <https://www.linkedin.com/in/joshamilton/>
 URL: <https://trophicnexus.com>  
 All rights reserved.
 
-This repository contains the source code for my personal website, built using [Jekyll](https://jekyllrb.com/) and based on the [Freelancer Theme](https://github.com/jeromelachaud/freelancer-theme).
+This repository contains the source code for my consulting website, built using [Jekyll](https://jekyllrb.com/) and based on the [Freelancer Theme](https://github.com/jeromelachaud/freelancer-theme).
 
 ## Features
 
-- Portfolio showcasing services
+- About Me
+- Services offered
 - Ability to add a grid of projects
 - Contact form integration using [Formspree](http://formspree.io/)
 - Responsive design
@@ -119,6 +120,20 @@ To build and serve the website locally, follow these steps:
 The site will be available at http://localhost:4000.
 
 ## Production Deployment
+
+To deploy the site to GitHub Pages, follow these steps:
+
+1. Build the site:
+    ```bash
+    bundle exec jekyll build
+    ```
+2. Push the changes to the `main` branch:
+    ```bash
+    git add .
+    git commit -m "Commit message"
+    git push origin main
+    ```
+The site will be available at https://trophicnexus.com.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
